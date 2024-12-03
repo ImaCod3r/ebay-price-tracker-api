@@ -42,7 +42,7 @@ def handleDataFromPage(items):
             below_average_items.append({
                 "title": items["titles"][index],
                 "price": items["prices"][index],
-                "link": items["links"]
+                "link": items["links"][index]
             })
     
     return {
