@@ -1,8 +1,11 @@
 import re
 
-def format_text(text):
+def formatText(text):
     return text.replace(" ", "+")
 
-def get_price(text):
-    price = re.search(r"\d+\.?\d*", text).group()
+def getNumericPrice(text):
+    price = float(re.search(r"\d+\.?\d*", text).group())
     return price
+
+def getAveragePrice(prices):
+    return sum(map(float, prices)) / len(prices)
